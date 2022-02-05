@@ -90,7 +90,8 @@ window.addEventListener('DOMContentLoaded', event => {
                 xhr.open("POST", 'https://docs.google.com/forms/u/0/d/e/1FAIpQLSenHzjO5nI8eeaqv2gX7MGdFbQkIAXoj9CEGJW5qiVMZ_HgZw/formResponse', true);
                 xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 
-                msgOj.innerHTML = '<div class="arlet arlet-success text-center">ありがとうございます。すぐ連絡いたします。</div>';
+                msgOj.innerHTML = '<div class="msg arlet arlet-success text-center">ありがとうございます。すぐ連絡いたします。</div>';
+                arlet("ありがとうございます。すぐ連絡いたします。")
                 //reset fuild
                 fullnameOj.value = "";
                 emailOj.value = "";
@@ -99,7 +100,7 @@ window.addEventListener('DOMContentLoaded', event => {
 
                 xhr.send(queryString);
             }else{
-                msgOj.innerHTML = '<div class="arlet arlet-danger text-center">すべての必須項目に入力してください。</div>';
+                msgOj.innerHTML = '<div class="msg arlet arlet-danger text-center">すべての必須項目に入力してください。</div>';
             }
     }
 
